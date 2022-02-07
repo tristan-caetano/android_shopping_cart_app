@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Saving shared prefs for custom items
         for(i = 0; i < 15; i ++){
-            System.out.println(i);
             customItems[i] = sharedPrefs.getInt((CUSTOM_ITEMS[i] + "i"), 0);
             customItemsNames[i] = sharedPrefs.getString(CUSTOM_ITEMS[i], "");
         }
@@ -137,7 +136,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPrefs.edit();
 
         // If statement that checks if the cart is full before adding item
-        if(getSumOfCart() < 16){
+        System.out.println(getSumOfCart());
+        if(getSumOfCart() < 15){
 
             // For loop that checks every item in the cart
             for(j = 0; j < 15; j ++){

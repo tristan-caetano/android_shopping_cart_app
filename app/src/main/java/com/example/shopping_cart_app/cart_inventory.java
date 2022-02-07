@@ -40,7 +40,6 @@ public class cart_inventory extends AppCompatActivity {
 
         // Saving shared prefs for custom items
         for(i = 0; i < 15; i ++){
-            System.out.println(i);
             customItems[i] = sharedPrefs.getInt((CUSTOM_ITEMS[i] + "i"), 0);
             customItemsNames[i] = sharedPrefs.getString(CUSTOM_ITEMS[i], "");
         }
